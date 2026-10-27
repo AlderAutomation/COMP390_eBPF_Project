@@ -4,8 +4,6 @@ project(UserModePacketFiltering VERSION 1.0 DESCRIPTION "Packet Filter in user s
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-find_package(raylib REQUIRED)
-
 add_executable(main 
 	src/main.c
 )

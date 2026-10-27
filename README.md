@@ -2,26 +2,31 @@
 
 ## Introduction 
 
-This repo contains two different apps, both do packet filter, but one works in user space and the other works in Kernel space using eBPF. These programs are meant to do the same filtering on same VM with same sample packet traffic to compare the difference of processing performance of user space and kernel space. 
+This project is a eBPF packet filtering project that I built for my Data Communications class in university. I wanted to prove and show that the eBPF was a much more performant way to filter packets with out relying on data from the internet.  
 
-## Setup  
+## Setup   
 
-I have configured two Ubunter server VMs. One will send packet data to the the second VM. The Second VM will run one packet filtering app and log benchmarks and then it will run the other packet filtering app using eBPF and log those benchmarks. Coding will be done in C language for best performance and for further C and OS programming practise. 
+I have configured two Ubunter server VMs. Server A (labelled Sender) will send packet data to server B (lebelled Reciever). Reciever will run one the standard OS and firewal to test and log benchmarks. After gathering metrics for how the OS handles the data stream, we will run the eBPF packet filtering app to test and log those benchmarks. 
 
-## Userland Filtering App 
+## Scope (Requirements)  
 
-This will be using the pcap libary to capture packet information.  
+- Coding will be done in C language for best performance and for further C and OS programming practise. 
+- Two identical Ubuntu VMs
+- fake IP data
+- filtering rules 
+- iperf3, ping, traceroute, btm for gathering benchmarking information
 
-## Kernel Filtering App 
+## eBPF Information  
 
-This will be using eBPF to capture packet information.  
+INFO about eBPF in General
 
-## Benchmarking Tools 
+## Baseline Data
 
-To capture the benchmarks required for my report, I will be using network tools such as:  
-- iperf3  
-- ping  
-- traceroute  
+INFO about OS filtering & performance
+
+## eBPF Filtering App 
+
+INFO about eBPF filtering and performance
 
 ## Sample Packet Data  
 
@@ -29,6 +34,7 @@ Possible sample packet data will be coming from:
 - (PCAP files)[https://wiki.wireshark.org/SampleCaptures]  
 - My own network (Maybe)   
 
-## Further Reading 
+## Further Reading (References)  
 
-There will be additional READMEs for each program in the subfolders. 
+link to ebpf
+link 
